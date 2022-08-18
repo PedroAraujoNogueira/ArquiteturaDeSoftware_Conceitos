@@ -1,0 +1,22 @@
+PERFORMANCE
+
+1. Performance é o desempenho que um software possui para completar um determinado workload.
+
+2. As unidades de medida para avarliarmos a performance de um software são:
+-> Latência(response time), que é o tempo medido desde o momento em que uma requisição é 
+feita até o momento em que recebe o retorno da resposta. 
+-> Throughput, que é o tanto de requisições que nosso software aquenta.
+
+3. Ter um software performático é diferente de ter um software escalável.
+
+METRICAS PARA MEDIR A PERFORMANCE
+
+1. Diminuindo a Latência.
+-> Normalmente a latência é medida em milisegundos, em geral a resposta não deve demorar 
+segundos.
+-> A latência é afetada pelo tempo de processamento da aplicação, o tempo da rede e o tempo 
+das chamadas externas(chamadas para banco de dados, API de terceiros e etc).
+
+2. Aumentando Throughput.
+-> Permitir que o software consiga lidar com mais requisições simultâneas.
+-> Diretamente ligado a latência.

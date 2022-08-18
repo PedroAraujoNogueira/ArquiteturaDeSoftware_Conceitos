@@ -1,0 +1,95 @@
+TIPOS DE ARQUITETOS:
+
+-> Arquiteto de Software
+É a relação entre os objetivos e restrições de negócio com os componentes a serem criados e 
+suas responsabilidades visando sua evolução do software. 
+1. Está diretamente ligado ao processo de desenvolvimento de software.
+2. Afeta diretamente na estrutura organizacional da empresa, como:
+Formação dos times.
+Estruturas dos componentes do software.
+
+-> Arquiteto de Solução
+1. Fica entre a área de negócios e software.
+2. Transformar requisitos de negócio em soluções de software.
+3. Desenhos arquiteturais da solução de um software para reproduzir 
+como ele irá funcionar(Ferramentas de desenho: C4, UML, BPMN).
+4. Analisa os impactos comerciais em relação a uma escolha de tecnológia.
+5. Pode participar do processo comercial de pré-venda e venda.
+6. Analisa os impactos de custos para o negócio.
+
+-> Arquiteto de Tecnologia
+1. Especialidade em tecnologias específicas do mercado.
+2. Geração de valor baseado em especialidades.
+EX: Arqueiteto Elastic, Arquiteto Java, 
+Arquiteto Node, Arquiteto SQL SERVER....
+
+-> Arquiteto Corporativo
+1. Impacta estrategicamente a organização como um todo.
+2. Avaliação de custos.
+3. Avaliação de possíveis novas tecnologias.
+4. Governança de tecnologia. 
+5. padronização de tecnologias.
+6. Planejamento de grandes implantações.
+
+O PAPEL DO ARQUITETO DE SOFTWARE:
+
+1. Transformar requisitos de negócios em padrões arquiteturais.
+2. Orquestrar pessoas, desenvolvedores e experts de domínio/PO.
+3. Entender de forma profunda conceitos e modelos arquiteturais.
+4. Auxilia na tomada de decisão nos momentos de crise.
+5. Reforça boas práticas de desenvolvimento.
+6. Code Reviews.
+
+VANTAGENS DE APRENDER ARQUITETURA DE SOFTWARE:
+
+1. Poder navegar da visão macro para a visão micro de um ou mais softwares.
+2. Entender quais são as diversas opções que temos para desenvolver a mesma 
+coisa e escolher a melhor solução para determinado contexto.
+3. Pensar a longo prazo no projeto e sua sustentabilidade.
+4. Tomar decisões de forma mais frias e calculada evitando assim ser influenciado
+por "Hypes" do mercado.
+5. Mergulho em padrões de projeto e de desenvolvimento e suas boas práticas.
+6. Ter mais clareza do impacto que o software possui na organização como um todo.
+7. Tomar decisões com mais confiança.
+
+PILARES DA ARQUITETURA DE SOFTWARE:
+
+-> Estruturação
+1. Fácil evolução, componentização para atender os objetivos do negócio.
+
+-> Componentização
+
+-> Relacionamento entre sistemas
+1. Regras de segurança na comunicação.
+2. Protocolos mais eficientes.
+3. Consumo de rede eficiente.
+
+-> Governança
+1. Padronização.
+2. Regras.
+3. Documentação.
+4. Linguagens que serão utilizadas.
+
+REQUISITOS ARQUITETURAIS:
+
+1. Performance. 
+Ex: 500ms por requisição com 50 transações por segundo.
+
+2. Armazenamento de dados. Ex: onde os dados serão armazenados, o volume suportado, de quanto
+em quanto tempo será feito o backup e etc.
+
+3. Escabilidade. 
+Ex: Escalar horizontalmente ou verticalmente, quem vai ser o responsável por 
+escalar(Kubernetes ou outro).
+
+4. Segurança. Ex: Certificações, PCIs, criptografia, TLS e etc.
+
+5. Legais. Ex: Ficar atento as regulações e legislações locais(LGPD e etc).
+
+6. Auditoria.
+Ex: Quais as informações que precisam ter logs para futuras auditorias, aonde
+e por quanto tempo essas informações ficarão guardadas.
+
+7. Marketing.
+Ex: Quais os perfis de usuário estão acessando o software, de qual região, classe social,
+dispositivos usados e etc.

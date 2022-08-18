@@ -1,0 +1,32 @@
+CARACTERÍSTICAS OPERACIONAIS
+
+1. Disponibilidade. 
+-> Quanto eu quero garantir de disponibilidade no meu serviço. Qual a 
+criticidade do meu sistema.
+
+2. Recuperação de desastres. 
+-> Como evitar que ocorra novamente, como recuperar o sistema e 
+deixar ele funcional o mais rápido possível, avaliar se precisa usar mais de uma zona de 
+disponibilidade e etc.
+
+3. Performance. 
+-> Dentro de Performance temos dois temas, latência e capacidade de 
+receber requisições(Throughput). Outras caracteríticas são quantas requisições por 
+segundo esse sistema deve suportar e qual a Performance que ele deve ter.
+
+4. Recuperação(backup). 
+-> Deixar backup em redes separadas, testar o backup de tempos em 
+tempos e etc.
+
+5. Confiabilidade e segurança. 
+-> Como evitar SQL ejection, brute force, ataques de robos na web 
+e etc.
+
+6. Robustes. 
+-> Garantir que a robustes da minha aplicação não atrapalhe ela de ser provida
+em outra regiao em caso de algum desastre ou indisponibilidade de um data center.
+
+7. Escalabilidade. 
+-> É o poder da minha aplicação conseguir escalar. O quão preparada minha
+aplicação está para escalar. Para isso temos que trabalhar de forma stateless, seguir
+os Twelve Factors.

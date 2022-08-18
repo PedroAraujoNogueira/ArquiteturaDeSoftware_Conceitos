@@ -1,0 +1,35 @@
+CARACTERÍSTICAS CROSS-CUTTING
+
+As caracteríticas Cross-Cutting são caracteríticas que vão cruzar sua aplicação. Ou seja,
+caracteríticasque devemos levar em consideração no nosso dia a dia.
+
+1. Acessibilidade.
+-> Analíse se sua aplicação está de fácil uso para todas as pessoas, inclusive deficientes
+visuais e auditivos ou que tenha alguma cormobidade.
+
+2. Processo de retenção e recuperação de dados.
+-> Quanto tempo os dados serão guardados e se esses dados realmente precisam ser guardados.
+Qual a velocidade que eu tenho que retornar esses dados, caso seja algo que não precise
+ser consultado constantemente e nem tenha necessidade de uma resposta instantanea então
+posso guardar em storages mais baratos, de forma mais compactada e com acesso mais lento.
+
+3. Autenticação e Autorização.
+-> Como os serviços serão autenticados. Se forem vários microserviços, como garantir que 
+eles tenham permissão para acessar uns aos outros. Analisar se cada serviço seu precisa 
+validar a autenticação ou se podemos concentrar toda essa parte de autenticação e autorização 
+em uma API Gateway.
+
+4. Legal.
+-> Tudo que acontece na sua aplicação tem que estar em conformidade com as leis do país.
+
+5. Privacidade dos dados.
+-> Pense em como proteger dados sensíveis do usuário, talvez criptografar esses dados ou 
+separar um banco só para guardar os dados sensíveis e que tenha um nivel de acesso mais 
+rigoroso, não podendo ser acessado por qualquer pessoa ou sistema.
+
+6. Segurança.
+-> Web firewall, regras e mecanismos para barrar robores, barrar tentativas de SQL 
+Injection e etc.
+
+7. Usabilidade.
+-> Documentação da API, padrões, contratos claros da API e etc.

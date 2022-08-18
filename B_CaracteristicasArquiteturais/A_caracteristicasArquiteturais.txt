@@ -1,0 +1,13 @@
+CARACTERÍSTICAS ARQUITETURAIS
+
+1. Todo sistema possui caracteríticas arquiteturais sejam elas pensadas de forma 
+intencional ou não.
+
+2. Uma forma de conseguir arquitetar seu software de forma intencional é tendo uma visão 
+do todo, ou seja, uma visão global do seu software, de como ele vai atuar e os requisitos
+específicos que ele precisa ter(inclusive requisitos não funcionais, como resiliencia).
+
+3. Podemos dividir as caracteríticas arquiteturais em 3 areas:
+-> Operacionais.
+-> Estruturais.
+-> Cross-Cutting.

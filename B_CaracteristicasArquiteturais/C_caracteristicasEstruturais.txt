@@ -1,0 +1,47 @@
+CARACTERÍSTICAS ESTRUTURAIS
+
+As caracteríticas Estruturais estão muito mais ligadas ao processo de desenvolvimento e 
+em como iremos desenvolver a aplicação. Logo temos que levantar pontos de atenção que devemos 
+ter no software para que ele funcione de uma forma cada vez mais flexível.
+
+1. Configurável. 
+-> Utilização de variáveis de ambiente. Não deve haver mudança no código quando 
+for necessário mudar alguma configuração.
+
+2. Extensibilidade. 
+-> A aplicação deve ser projetada pensando em crescer, ou seja, ela deve
+crescer de forma que novas funcionalidades possam ser plugadas nela, seja uma nova 
+funcionalidade que vai ser desenvolvida ou uma ferramenta de terceiros. A mesma coisa 
+acontece quando for necessário trocar alguma biblioteca ou serviço por outro similar, apenas
+devemos trocar os adaptadores, usando a mesma interface e sem alterar pontos estruturais da 
+aplicação.
+
+3. Fácil instalação. 
+-> Padronização do ambiente com uso de containers, inclusive para prover de forma fácil ferramentas
+como rabbit, elastic e banco de dados, tudo com um script de containers.
+
+4. Reuso de componentes e bibliotecas. 
+-> Em grandes empresas que trabalham com diversos microserviços as vezes é necessário criar uma
+biblioteca que será usada por vários microserviços, evitando que cada microserviço crie sua 
+propria biblioteca.
+
+5. Internacionalização. 
+-> Levante preocupações desde o uso de timezone, conversão de valor de moeda até tradução de 
+uma página na web. É interessante que o nome de variáveis, métodos e logs estejam sempre em 
+inglês.
+
+6. Fácil manutenção.
+-> Fazer um Produto complexo ser implementado de forma simples, quanto mais simples for o 
+código mais fácil será sua manutenção. Aprender os principios do SOLID, implementar testes 
+automatizados e como dividir sua aplicação em camadas, adaptadores e interfaces irão ajudar
+muito na manutenção do código, seja para correção de bugs como para implementação de novas 
+features.
+
+7. Portabilidade.
+-> A aplicação deve ser estruturada para que seja "fácil" a mudança de alguma biblioteca ou 
+ferramenta por outra. Por exemplo, mudar um gateway de pagamento, uma biblioteca que gerencia
+timezones e etc.
+
+8. Facil suporte para resolução de problemas.
+-> Trabalhar com logs, boas ferramentas de debugging, observabilidade, 
+centralização e padronização dos logs, métricas.
