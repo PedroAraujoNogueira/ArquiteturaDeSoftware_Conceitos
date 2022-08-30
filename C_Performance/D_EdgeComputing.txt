@@ -1,0 +1,23 @@
+CACHING: EDGE COMPUTING
+
+O Edge Computing nos ajuda a fazer com que a informação esteja mais perto do usuário, 
+evitando com que a informação trafegue demais pela internet. Essa informação pode ser
+processada mais próxima do usuário, evitando com que a requisição chegue ao servidor.
+
+-> Cache realizado mais próximo do usuario.
+
+-> Evita que a requisição chegue até o Cloud Provider/Infra.
+
+-> Normalmente usada para arquivos estáticos(css, imagens, alguns htmls).
+
+-> CDN - Content Delivery Network.
+A informação é espalhada entre todos os cachings e quanto uma requisição é feita
+a informação é retornada do caching mais proximo da localização da requisição.
+
+-> Cloudflare workers
+A Cloudflare é uma plataforma de EDGE Computing que tem serviços muito performáticos
+para ligar com caching javascript.
+
+-> Vercel 
+É a empresa que mantém o NextJs e que otimiza o caching de aplicações NextJs.
+

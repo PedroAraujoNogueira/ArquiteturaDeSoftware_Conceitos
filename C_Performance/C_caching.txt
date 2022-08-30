@@ -1,0 +1,69 @@
+CACHING 
+
+-> Com o caching podemos guardar resultados que já foram processados e entregar de maneira mais
+rápida ao cliente sem que tenhamos que processar novamente esses resultados para depois 
+entregar ao cliente.
+
+1. Cache na borda / Edge Computing.
+-> Esse tipo de cache vai fazer com que o usuário nem chegue a bater na sua aplicação ou 
+na cloud onde sua aplicação está hospedada, pois esse tipo de cache já irá trazer dados
+processados que ficaram armazenados em um servidor antes do seu servidor principal, como 
+por exemplo em um servidor do cloud flare que já retorna o html e as imagens da sua página
+sem precisar ir até seu servidor. Esse tipo de cache é muito rápido e não gera um
+custo elevado.
+
+2. Dados estáticos.
+-> Esses tipos de dados que não mudam com frequência são ótimos para estarem em cache.
+
+3. Páginas WEB.
+-> Para páginas web podemos usar o caching de borda / Edge Computing.
+
+4. Funções internas.
+-> Evita o reprocessamento de algoritmos pesados que tem um valor de saída fixo durante um 
+determinado tempo e evita também a consulta a banco de dados para pegar valores que não mudam
+constantemente.
+
+5. Objetos.
+
+CACHING EXCLUSIVO vs CACHING COMPARTILHADO
+
+Características do Caching EXCLUSIVO: funciona localmente em uma máquina.
+
+1. Baixa latência.
+-> É um cache que possui baixa latência, pois está localmente em uma máquina, não precisando
+portanto acessar a rede para consultar o cache.
+
+2. Duplicado entre os nós.
+-> É um cache exclusivo em cada nó ou cada máquina. Cada máquina terá seu próprio cache e 
+esse cache não será compartilhado entre as outras máquinas ou nós.
+
+3. No cache exclusivo podemos ter problemas relacionados a sessões.
+-> Teremos problemas de sessões pois a sessão do usuario estará com caching em apenas
+uma máquina e se a requisição do usuário bater em outra máquina esse caching pode não 
+estar lá pois nesse caso as máquinas não compartilham o caching.
+
+Características do Caching COMPATILHADO: trabalha com um cache central onde todas 
+as máquinas que precisam desse cache central precisam acessá-lo, seja através de um 
+banco de dados central(Redis, Mongo, MySQL e etc) ou outra forma de armazenar o cache.
+
+1. Maior latência.
+-> Como o cache não está locamente na máquina, então temos uma maior latência para chegar
+até esse cache centralizado.
+
+2. Não há duplicação do cache.
+-> As máquinas compartilham seus caches ficando tudo centralizado em um cache central, logo
+quando uma máquina X precisar de um cache que foi feito na máquina Y ela terá acesso, pois 
+o cache é compartilhado entre todas as máquinas por meio de um cache central.
+
+3. Sessões compartilhadas.
+-> Não teremos problemas relacionados a sessões do usuário, pois todas as máquinas terão 
+acesso a essas sessões.
+
+
+
+
+
+
+
+
+

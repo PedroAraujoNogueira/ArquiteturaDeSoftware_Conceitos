@@ -1,0 +1,43 @@
+PRINCIPAIS RAZÕES PARA BAIXA PERFORMANCE
+
+1. Processamento ineficiente.
+-> Algoritmos mal feitos e trabalhos executados de forma errada.
+
+2. Recursos computacionais limitados.
+-> Hardware lento em relação a quantidade de requisições e as tarefas executadas da aplicação.
+
+3. Trabalhar de forma bloqueante.
+-> Onde uma requisição trava o uso da aplicação até que ela(requisição) seja concluída.
+
+4. Acesso serial aos recursos.
+-> Código onde não é feito o uso de threads e é atendida apenas uma requisição por vez. 
+
+PRINCIPAIS FORMAS PARA AUMENTAR A EFICIÊNCIA
+
+1. Escala da capacidade de recurso computacional(CPU, Disco, Memória, Rede)
+-> Identificar qual recurso computacional está com gargalo e prover mais desse 
+recurso.
+
+2. Lógica por trás do software(Algoritmos, queries, overhead de frameworks).
+-> Não usar frameworks pesados se sua aplicação não precisa de todo o poder deles. 
+Melhorar o algoritmo para que o mesmo trabalhe de forma mais eficiente e montar
+queries com filtros e uso de indices para melhorar a performance da query.
+
+3. Concorrência e paralelismo.
+-> Permitir que a aplicação lide com varias requisições ao mesmo tempo e com a chamada 
+de diferentes recursos de forma paralela.
+
+4. Banco de dados(tipos de bancos, schema).
+-> Utilizar um banco de dados adequado para seu problema. Modelar o banco de forma otimizada.
+Utilizar indices no banco de dados e usar explain e ferramentas de APM nas queries para ver 
+a performance dessas queries.
+
+5. Caching.
+-> Processar algo uma vez e manter o resultado daquela consulta de uma forma que seja acessada
+bem mais rápido, sem a necessidade de processar a consulta novamente. Usar caching sempre que 
+possível ajuda bastante na performance.
+
+
+
+
+
