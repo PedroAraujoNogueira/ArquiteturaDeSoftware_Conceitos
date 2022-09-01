@@ -1,0 +1,23 @@
+RESILIÊNCIA
+
+Resiliência é um conjunto de estratégias adotadas intencionalmente para a 
+adaptação de um sistema quando uma falha ocorre.
+
+Ter estratégias de resiliência nos possibilita minimizar os riscos de perda 
+de dados e transações importantes para o negócio.
+
+PROTEGER e SER PROTEGIDO
+
+Quando o serviço faz parte de um ecossistema com outros serviços temos que pensar 
+em proteger tanto o nosso sistema como os sistemas aos quais ele se conecta.
+
+1. Um sistema em uma arquitetura distribuída precisa adotar mecanismos de 
+autopreservação para garantir ao máximo sua operação com qualidade.
+
+2. Um sistema não pode ser "egoísta" ao ponto de realizar mais requisições em um sistema 
+que está falhando.
+
+3. Um sistema lento no ar muitas vezes é pior do que um sistema fora do ar.(Efeito Dominó)
+Em caso de um serviço estar sobrecarregado, é melhor ele "avisar" que não receberá mais
+requisições até que ele consiga se recuperar do que ficar demorando para responder e até 
+mesmo ficar fora do ar.

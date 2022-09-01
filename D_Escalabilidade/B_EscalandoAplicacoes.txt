@@ -1,0 +1,26 @@
+ESCALANDO SOFTWARE
+
+DESCENTRALIZAÇÃO
+Escalar software horizontalmente significa descentralizar, ou seja, tirar tudo que está 
+focado em uma máquina e colocar de forma externa para que todas as máquinas tenham acesso.
+Assim nossas máquinas poderam ser criadas e destruída a qualquer momento sem que a gente 
+perca informações.
+
+-> Disco efêmero
+Ou seja, tudo que é salvo no disco da máquina pode ser perdido. Caso queira guardar um 
+arquivo de forma permanente, como uma imagem por exemplo, poderíamos subir em uma Bucket 
+no S3 por exemplo, então todas as máquinas teriam acesso ao bucket e se uma máquina cair eu
+não perco a imagem.
+
+-> Servidor de Aplicação vs Servidor de Assets.
+Quando escalamos nosso software devemos escalar apenas nosso Servidor de Aplicação e 
+todos os Assets(Imagem, Html, css, MP3, arquivos txt) devem ficar em algum canto que seja
+acessível a todos os Servidores de Aplicação.
+
+-> Cache centralizado.
+Um cache compartilhado entre todas as máquinas. Ou seja, em um servidor externos específico 
+para cache onde todas as máquinas que precisarem ter acesso a esse cache terão acesso ao 
+servidor. 
+
+-> Sessões centralizadas.
+Sessões centralizadas entre todas as máquinas, normalmente em um servidor de cache.

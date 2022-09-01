@@ -1,0 +1,43 @@
+ESCALA DE BANCO DE DADOS
+
+Escalar banco de dados em geral é algo complexo, porém abaixo estão alguns pontos que 
+podem ser feitos para que essa escala aconteça:
+
+1. Aumentando recursos computacionais.
+OBS: Porém aumentar recursos computacionais tem um limite e pode ter um custo alto.
+
+2. Distribuindo responsabilidades(escrita vs leitura)
+Se nosso banco de dados estiver tendo muita escrita e muita leitura podemos pensar em 
+criar um banco de dados específico para leitura e um banco de dados específico para 
+escrita. 
+
+3. Escala de forma horizontal.
+Adicionando várias réplicas que se atualizam entre si e que dividem a carga de acesso ao banco. 
+
+4. Serverless.
+Usando bancos fornecidos pelas Clouds, pois as próprias clouds se preocupam em escalar nosso 
+banco de dados.
+
+OTIMIZAÇÃO DE QUERIES E ÍNDICES
+
+1. Configurar um sistema de APM(Application Performance Monitoring).
+Com isso conseguimos entender todas as queries que estão rodando(inclusive o tempo e a latencia 
+de cada query) e quais os problemas que estão gerando gargalos.
+
+2. Trabalhar com índices de forma consciente.
+Isso deixa a consulta mais otimizada se feito da forma correta. Evita que o banco seja pecorrido
+linha por linha até que seja achado o valor(ou valores) da query.
+
+3. Explain nas queries.
+O explain mostra passo a passo a query que está rodando no banco de dados, mostrando o tempo
+que cada etapa da query demora, então podemos agir para otimizar alguma parte da query.
+
+4. CQRS(Command Query Responsability Segregation)
+Isso afeta a forma como iremos desenvolver o software. Pois esse Pattern separa o comando 
+de escrita do comando de leitura.
+
+
+
+
+
+

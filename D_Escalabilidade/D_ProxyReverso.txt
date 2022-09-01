@@ -1,0 +1,41 @@
+PROXY REVERSO
+
+Um proxy reverso é um servidor que fica na frente dos servidores web e encaminha as 
+solicitações do cliente(por exemplo, navegador web) para esses servidores web.
+O PROXY REVERSO é um intermediário entre o cliente e o servidor, porém que age em 
+favor do servidor com regras estabelecidas pelo servidor. 
+
+CASOS DE USO DE UM PROXY REVERSO
+
+1. Firewall(no sentido da internet para a rede local do servidor)
+Faz uma filtragem de trafego, permitindo ou bloqueando requisições para o servidor.
+Por exemplo: bloquear requisições com origem em um país.
+OBS: Também podemos ter um firewall da rede local do cliente para a internet.
+
+2. Faz o papel de um Load Balancer.
+Balanceia a carga entre vários servidores com o mesmo propósito(software) ou caso 
+sejam servidores com propósitos(softwares) diferentes o Load Balancer direciona 
+a requisição para o servidor adequado de acordo com a url, com parametros da url,
+com Headers e etc. 
+
+3. CDN(Content Delivery Network)
+Normalmente uma empresa específica para esse propósito, onde essa empresa tem vários 
+servidores espalhados pelo mundo que irão servir como intermediários para nossos
+servidores web. Então podemos usar esse servidores intermediários como cache e 
+o servidor intermediário que estiver mais proximo do cliente é quem vai responder
+ao cliente, deixando a comunicação mais rápida e com menor latência e maior desempenho. 
+
+SOLUÇÕES POPULARES DE PROXY REVERSO
+
+1. NGINX -> é a solução mais popular de todas, muito utilizada no mercado, vale a pena 
+aprender e entender, pois muitas outras ferramentas de proxy e gateway usam o NGINX por 
+trás.
+2. HAPROXY
+3. Traefik
+
+PROXY REVERSO vs PROXY
+
+O PROXY é um intermediário entre o cliente e o servidor, porém que age em favor do 
+cliente com regras estabelecidas pelo cliente.
+O PROXY REVERSO é um intermediário entre o cliente e o servidor, porém que age em 
+favor do servidor com regras estabelecidas pelo servidor. 

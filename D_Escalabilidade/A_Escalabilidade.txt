@@ -1,0 +1,27 @@
+ESCALABILIDADE
+
+Escalabilidade é a capacidade de sistemas suportarem o aumento(ou a redução) dos 
+workloads incrementando (ou reduzindo) o custo em menor ou igual proporção.
+
+ESCALABILIDADE vs PERFORMANCE
+
+Enquanto performance tem o foco em reduzir a latência e aumentar o throughput, a
+escalabilidade visa termos a possibilidade de aumentarmos ou diminuir o throughput
+adicionando ou removendo a capacidade computacional.
+
+Escala Vertical
+-> Quando eu aumento os recursos da minha máquina.
+OBS: Na Escala Vertical termos dois problemas:
+1. Se tivermos apenas uma máquina e essa máquina cair então nosso software vai ficar 
+momentaneamente fora do ar.
+2. Há um limite para a quantidade de capacidade computacional que uma só máquina pode ter.
+
+Escala Horizontal:
+-> Quando eu aumento a quantidade de máquinas.
+-> Temos que usar um load balancer ou um proxy reverso para balancear a carga em cada máquina.
+
+ESCALANDO SOFTWARE
+
+DESCENTRALIZAÇÃO
+
+-> Disco efêmero

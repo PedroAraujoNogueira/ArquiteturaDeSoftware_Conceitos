@@ -1,0 +1,25 @@
+HEALTH CHECK
+
+O HEALTH CHECK é um termo muito utilizado que significa que vamos monitorar a 
+saúde da nossa aplicação. Alguns pontos para isso são:
+
+1. Sem sinais vitais, não é possível saber a "saúde" de um sistema. 
+Nesse caso precisamos de algum mecanismo que de tempo em tempo bata na aplicação
+e verifique o tempo que a aplicação demora para responder. 
+
+2. Um sistema que não está saudável possui uma chance de se recuperar caso o tráfego
+pare de ser direcionado a ele temporariamente.
+Ou seja, caso a aplicação não esteja saudável, tem que ser criada alguma estratégia 
+para avisar aos donos das requisições que essa API está temporariamente indisponível ou 
+está se recuperando, e assim que o mecanismo de HEALTH CHECK identificar que a aplicação
+se recuperou então as outras aplicações podem voltar a mandar requisições para ela.
+
+3. HEALTH CHECK de qualidade.
+Em alguns casos as aplicações tratam de maneira errada o HEALTH CHECK, por exemplo, criando 
+uma rota na aplicação somente para receber essas chamadas de HEALTH CHECK, porém essa rota 
+criada especificamente para isso não faz todos os processos feitos pela rota que realmente 
+deveria ser monitorada, por exemplo, a rota que deveria ser monitorada faz acesso ao banco
+de dados e a criada especificamente para o HEALTH CHECK somente retorna um 200 OK. Dessa 
+forma a saúde da aplicação não vai estar sendo monitorada de forma adequada. O que deve ser
+feito é, de preferencia, monitorar a rota que realmente é usada ou criar uma rota 
+especificamente para isso mas que simule os mesmo processos feitos pela rota real.

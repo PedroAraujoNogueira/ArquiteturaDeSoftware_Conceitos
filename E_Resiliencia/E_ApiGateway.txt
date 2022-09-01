@@ -1,0 +1,18 @@
+API GATEWAY
+
+Uma API GATEWAY é um sistema que centraliza o recebimento de todas as requisições
+enviadas para o seu sistema. Todas as requisições passam pelo API GATEWAY que 
+vai aplicar regras, políticas, plugins e etc, personalizadas para cada serviço e vai
+passar adiante as requisições ou negar as requisições para o serviço desejado.
+
+1. Garante que requisições "inapropriadas" não cheguem até nossas APIs.
+Por exemplo, verifica se o usuário está autenticado ou não, caso não esteja,
+a API GATEWAY vai recusar essa requisição fazendo com que ela nem sequer bata 
+na nossa API. A API GATEWAY é como se fosse nossa portaria.
+
+2. Algumas API GATEWAY como o Kong, permitem instalar diversos plugins que 
+permitem implementar políticas de RATE LIMITING(inclusive permitindo colocar 
+prioridades de acesso e quantidades diferentes para cada cliente), HEALTH CHECK,
+CIRCUIT BREAKER e etc. Outro plugin possível é fazer com que toda requisição que 
+chegue em XML seja transformada para JSON, também é possível disparar Lambdas
+Functions e etc.

@@ -1,0 +1,23 @@
+CIRCUIT BREAKER
+
+O CIRCUIT BREAKER pode ser implementado com código no próprio sistema, existem 
+bibliotecas que fazem isso. Porém também existem recursos mais modernos, por 
+exemplo quando estamos trabalhando com Service Mesh, onde o CIRCUIT BREAKER é
+aplicado diretamente na rede, logo essa responsabilidade deixa de ser do 
+desenvolvedor e passa a ser do time de infra/devops.
+
+1. Protege o sistema fazendo com que as requisições feitas para ele sejam negadas.
+Por exemplo, faz retornar um erro 500.
+
+2. Circuito fechado = Requisições chegam normalmente.
+
+3. Circuito aberto = Requisições não chegam ao sistema. Erro instantâneo ao cliente.
+Ou seja, quando o Circuito está aberto todos os cliente recebem um erro, como um 
+status 500 por exemplo.
+
+4. Circuito meio aberto = Permite uma quantidade limitada de requisições para 
+verificação se o sistema tem condições de voltar ao ar integralmente.
+Nesse caso existe uma tentativa de voltar ao Circuito Fechado, porém caso for
+identificado que o sistema ainda não está conseguindo responder as requisições
+então o sistema irá para o estado de Circuito Aberto e retornará ao estado Meio 
+Aberto após X segundos.

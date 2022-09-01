@@ -1,0 +1,15 @@
+RATE LIMITING
+
+1. O RATE LIMITING protege o sistema baseado no que ele foi projetado para aquentar.
+Então se sabemos que nosso sistema aquenta 100 requisições por segundo(podemos descobrir 
+isso através de teste de carga e teste de stress), o RATE LIMITING da aplicação tem que 
+limitar ela para que ela receba no máximo 100 requisições por segundos.
+
+2. Preferência programada por tipo de client.
+Conseguimos gerar preferencias por clientes especificos. Então por exemplo, se nossa
+aplicação suporta 100 requisições por segundo e temos um cliente muito importante,
+podemos dizer que esse cliente importante pode ser responsável por até 60 requisições
+por segundo e todos os outros clientes somados podem ter até 40 requisições por segundo.
+Isso faz com que mesmo que todos os outros clientes menos importantes atinjam o total de 
+40 requisições por segundo, o seu sistema continuará respondendo seu cliente principal e 
+vai parar de responder apenas os outros clientes temporariamente.
