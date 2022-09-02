@@ -1,0 +1,19 @@
+SERVICE MESH
+
+Exemplo de SERVICE MESH: Istio.
+
+1. Controla o tráfego de rede.
+Um SERVICE MESH nos permite colocar proxy do lado de cada serviço nosso. Então 
+quando a aplicação A quer conversar com a aplicação B, essa requisição bate
+primeiro no Proxy e vice-versa. Então toda comunicação de rede é efeito via 
+proxys, ou seja, com SERVICE MESH tudo que está passando na rede consegue 
+ser controlado e medido.
+
+2. Evita implementações de segurança e resiliência pelo próprio sistema.
+Ou seja, não precisamos fazer código para tratar retentativas, nem RATE LIMITING,
+nem CIRCUIT BREAKER, pois esses tratamentos ficarão sobre responsabilidade da 
+camada de rede.
+
+3. mTLS.
+Comunicação criptografada entre sistemas.
+
