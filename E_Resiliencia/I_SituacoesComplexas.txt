@@ -1,0 +1,21 @@
+SITUAÇÕES COMPLEXAS
+
+Como vamos ter a resiliência da resiliência?
+Por exemplo:
+
+1. O que acontece se o message broker(rabbit, kafka e etc) cair?
+Haverá perda de mensagem?
+O sistema vai ficar fora do ar?
+
+2. SINGLE POINT OF FAILURE.
+Por exemplo, se nossa resiliência está apoida no apache kafka, significa
+que nosso apache kafka é nosso Single Point Of Failure, pois se ele cair
+vai cair tudo. 
+Como conseguimos evitar isso? 
+Como conseguimos preparar o sistema para caso o kafka caia, o sistema não 
+caia junto, e ainda mais, que a gente não perda nenhuma informação?
+
+Resposta: Isso vai depender de até quanto queremos gastar para implementar mais 
+mecanismos de resiliência em situações que aparentemente são muito improváveis 
+e técnicas mais avançadas de redundância, multi regiões cloud por exemplo ou
+até mesmo multi clouds.

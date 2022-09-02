@@ -1,0 +1,7 @@
+TRABALHAR DE FORMA ASSÍNCRONA
+
+1. Evita perda de dados.
+Pois o processamento dos dados não precisa ser instantâneo, os dados vão ficar
+em uma fila até que a aplicação consiga processá-los. Ou seja, mesmo que a aplicação
+esteja fora do ar ou com uma alta carga, os dados vão ficar na fila até que a aplicação
+consiga processar os dados da fila.

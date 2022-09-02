@@ -1,0 +1,21 @@
+RETRY
+
+Muitas vezes não adianta só tentar reenviar X vezes uma requisição, pois se 100 
+requisições foram enviadas e não tiveram sucesso e tentarmos reenviar essas requisições
+após X segundos todas juntas, provavelmente o sistema não consiga responde-las novamente.
+Então o melhor a se fazer em políticas de RETRY é:
+
+1. Exponential backoff - Jitter. Essa técnica consiste em:
+
+-> Aumentar o tempo de espera a cada retentativa. Ou seja, se na primeira retentativa
+eu esperei 2 segundos para tentar novamente então na proxima eu vou esperar 4 segundos
+e na próxima vou esperar 8, e assim por diante, aumentando o tempo de espera de forma 
+exponencial.
+
+-> Outro ponto importante é colocar um "ruído" no tempo de espera da retentativa para 
+evitar que após X segundos as mesmas 100 requisições, que não conseguiram ser atendidas,
+sejam enviadas todas juntas novamente. Ou seja o "ruído" vai servir para dar um pequeno 
+espaço entre as 100 requisições do exemplo. Então, por exemplo, uma requisição vai fazer 
+sua retentativa após 1,95 segundos, a outra requisição vai fazer sua retentativa após
+2 segundos, a outra após 2,05 segundos, de modo que as 100 requisições que deverão sofrer
+retentativas não sejam enviadas exatamente ao mesmo tempo.  
